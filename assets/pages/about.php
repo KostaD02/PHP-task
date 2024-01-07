@@ -45,7 +45,7 @@ if (!in_array($sub_page, $allowedSubPages)) {
           break;
         }
       case "our_team": {
-          echo "<section class='flex-center'>";
+          echo "<section class='flex-center' style='gap: 16px'>";
           include './assets/components/our_team.php';
           echo "</section>";
           break;
