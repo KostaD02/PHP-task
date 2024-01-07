@@ -63,9 +63,21 @@ $subPage = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
             </li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a <?php echo ($page === 'gallery') ? 'class="nav-link active"' : 'class="nav-link"'; ?>
-            href="index.php?page=gallery">გალერეა</a>
+        <li class="nav-item dropdown">
+          <a <?php echo ($page === 'gallery') ? 'class="nav-link dropdown-toggle active"' : 'class="nav-link dropdown-toggle"'; ?> href="index.php?page=gallery&sub_page=photo" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            გალერეა
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a <?php echo ($subPage === 'photo') ? 'class="dropdown-item active"' : 'class="dropdown-item"' ?>
+                href="index.php?page=gallery&sub_page=photo">ფოტო გალერეა</a>
+            </li>
+            <li>
+              <a <?php echo ($subPage === 'video') ? 'class="dropdown-item active"' : 'class="dropdown-item"' ?>
+                href="index.php?page=gallery&sub_page=video">ვიდეო გალერეა</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a <?php echo ($page === 'contact') ? 'class="nav-link active"' : 'class="nav-link"'; ?>
