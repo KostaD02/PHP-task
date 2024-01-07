@@ -3,7 +3,11 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 56px;
 }
 
 header {
@@ -14,10 +18,17 @@ header nav .container-fluid .collapse {
   justify-content: flex-end;
 }
 
-header nav a {
+header nav a,
+footer h6 {
   user-select: none;
 }
 
 header nav a.active {
   color: var(--bs-blue) !important;
+}
+
+main {
+  height: 100%;
+  padding-top: 56px;
+  position: relative;
 }
