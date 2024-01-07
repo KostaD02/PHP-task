@@ -1,17 +1,20 @@
-:root {
-  --active-color: red;
-}
-
-a {
-  text-decoration: none !important;
-}
-
 body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 56px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 header {
@@ -52,4 +55,14 @@ main section.wrapper {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 10px;
+}
+
+main ul.socials {
+  gap: 16px;
+  padding: 0px;
+  margin: 0px;
+}
+
+main ul.socials li a {
+  font-size: 20px;
 }
