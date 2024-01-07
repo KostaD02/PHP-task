@@ -34,6 +34,12 @@ if (!in_array($sub_page, $allowedSubPages)) {
       ?>
     </h3>
   </article>
+  <section class="m-auto flex-center" style="gap: 20px">
+    <a class="btn btn-primary" href="index.php?page=blog&sub_page=science">მეცნიერება</a>
+    <a class="btn btn-primary" href="index.php?page=blog&sub_page=art">ხელოვნება</a>
+    <a class="btn btn-primary" href="index.php?page=blog&sub_page=sport">სპორტი</a>
+    <a class="btn btn-primary" href="index.php?page=blog&sub_page=economic">ეკონომიკა</a>
+  </section>
   <section class="blog_content">
     <?php
     $jsonString = file_get_contents('./assets/data/blog.json');
