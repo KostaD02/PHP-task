@@ -1,0 +1,23 @@
+:root {
+  --active-color: red;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+header nav .container-fluid .collapse {
+  justify-content: flex-end;
+}
+
+header nav a {
+  user-select: none;
+}
+
+header nav a.active {
+  color: var(--bs-blue) !important;
+}
