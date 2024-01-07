@@ -4,7 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konstantine Datunishvili</title>
+  <?php
+  $page = isset($_GET['page']) ? $_GET['page'] : 'main';
+  $allowedPages = ['main', 'about', 'blog', 'contact', 'gallery'];
+  if (!in_array($page, $allowedPages)) {
+    $page = 'main';
+  }
+  $sub_page = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
+  $title = $sub_page === '' ? ucfirst($page) : ucfirst($page) . ' • ' . ucfirst($sub_page);
+  echo "<title>$title</title>"
+    ?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/styles/style.css">
@@ -17,13 +26,6 @@
     include './assets/components/header.php';
     ?>
   </header>
-  <?php
-  $page = isset($_GET['page']) ? $_GET['page'] : 'main';
-  $allowedPages = ['main', 'about', 'blog', 'contact', 'gallery'];
-  if (!in_array($page, $allowedPages)) {
-    $page = 'main';
-  }
-  ?>
   <main class="container-xxl m-auto">
     <?php
     include './assets/pages/' . $page . '.php';
