@@ -66,3 +66,21 @@ main ul.socials {
 main ul.socials li a {
   font-size: 20px;
 }
+
+main section.blog_content {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  place-items: center;
+}
+
+main section.blog_content .card {
+  width: 100%;
+  max-width: 800px;
+}
+
+main section.blog_content .card img {
+  width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+}
