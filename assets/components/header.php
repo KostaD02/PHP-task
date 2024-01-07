@@ -39,9 +39,29 @@ $subPage = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
             </li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a <?php echo ($page === 'blog') ? 'class="nav-link active"' : 'class="nav-link"'; ?>
-            href="index.php?page=blog">ბლოგი</a>
+        <li class="nav-item dropdown">
+          <a <?php echo ($page === 'blog') ? 'class="nav-link dropdown-toggle active"' : 'class="nav-link dropdown-toggle"'; ?> href="index.php?page=blog&sub_page=science" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            ბლოგი
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a <?php echo ($subPage === 'science') ? 'class="dropdown-item active"' : 'class="dropdown-item"' ?>
+                href="index.php?page=blog&sub_page=science">მეცნიერება</a>
+            </li>
+            <li>
+              <a <?php echo ($subPage === 'art') ? 'class="dropdown-item active"' : 'class="dropdown-item"' ?>
+                href="index.php?page=blog&sub_page=art">ხელოვნება</a>
+            </li>
+            <li>
+              <a <?php echo ($subPage === 'sport') ? 'class="dropdown-item active"' : 'class="dropdown-item"' ?>
+                href="index.php?page=blog&sub_page=sport">სპორტი</a>
+            </li>
+            <li>
+              <a <?php echo ($subPage === 'economic') ? 'class="dropdown-item active"' : 'class="dropdown-item"' ?>
+                href="index.php?page=blog&sub_page=economic">ეკონომიკა</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a <?php echo ($page === 'gallery') ? 'class="nav-link active"' : 'class="nav-link"'; ?>
