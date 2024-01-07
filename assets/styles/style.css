@@ -84,3 +84,39 @@ main section.blog_content .card img {
   max-height: 800px;
   object-fit: contain;
 }
+
+main section.gallery {
+  gap: 50px;
+  position: relative;
+}
+
+main section.gallery div.image {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+main section.gallery div.image div.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(16, 16, 16, 0.3);
+  top: 0px;
+  left: 0px;
+  transition: 0.5s ease;
+}
+
+main section.gallery div.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+main section.gallery div.image div.overlay:hover {
+  opacity: 0;
+}
+
+main section.gallery video {
+  width: 100%;
+}

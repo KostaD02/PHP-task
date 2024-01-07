@@ -8,7 +8,7 @@ $subPage = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
 ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php?page=main">KD</a>
+    <a class="navbar-brand" href="index.php">KD</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@ $subPage = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
       <ul class="navbar-nav">
         <li class="nav-item">
           <a <?php echo ($page === 'main') ? 'class="nav-link active"' : 'class="nav-link"'; ?>
-            href="index.php?page=main">მთავარი</a>
+            href="index.php">მთავარი</a>
         </li>
         <li class="nav-item dropdown">
           <a <?php echo ($page === 'about') ? 'class="nav-link dropdown-toggle active"' : 'class="nav-link dropdown-toggle"'; ?> href="index.php?page=about&sub_page=history" role="button" data-bs-toggle="dropdown"
