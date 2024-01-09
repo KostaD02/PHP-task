@@ -3,7 +3,7 @@
     <form class="p-3 shadow rounded" method="POST" action="index.php?page=admin&sub_page=add_photo">
       <div class="mb-3">
         <label for="src" class="form-label">სურათის მისამართი</label>
-        <input type="url" placeholder="სურათის მისამართი" class="form-control" id="src" name="src">
+        <input type="url" placeholder="სურათის მისამართი" class="form-control" id="src" name="src" required>
       </div>
       <div class="mb-3">
         <button class="btn btn-primary">გააგზავნე</button>
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script>
       Swal.fire({
         title: "წარმატებული ოპერაცია",
-        text: "თქვენი სურათი დაემატა წარმატებით",
+        text: "თქვენი სურათი წარმატებით დაემატა",
         icon: "success"
       });
     </script>

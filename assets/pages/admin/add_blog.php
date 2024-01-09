@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script>
       Swal.fire({
         title: "წარმატებული ოპერაცია",
-        text: "თქვენი ბლოგი დაემატა წარმატებით",
+        text: "თქვენი ბლოგი წარმატებით დაემატა",
         icon: "success"
       });
     </script>
