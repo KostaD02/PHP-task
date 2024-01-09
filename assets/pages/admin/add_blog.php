@@ -1,7 +1,4 @@
 <section class="wrapper">
-  <article class="text-center">
-    <h3>ბლოგის დამატება</h3>
-  </article>
   <section class="contact">
     <form class="p-3 shadow rounded" method="POST" action="index.php?page=admin&sub_page=add_blog">
       <div class="mb-3">
