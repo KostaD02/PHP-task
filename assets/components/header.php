@@ -1,10 +1,16 @@
 <?php
+session_start();
 $page = isset($_GET['page']) ? $_GET['page'] : 'main';
-$allowedPages = ['main', 'about', 'blog', 'contact', 'gallery'];
+$allowedPages = ['main', 'about', 'blog', 'contact', 'gallery', 'admin', 'admin_login'];
 if (!in_array($page, $allowedPages)) {
   $page = 'main';
 }
 $subPage = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
+if (isset($_GET['logout'])) {
+  unset($_SESSION['user']);
+  header('Location: index.php?page=admin_login');
+  exit();
+}
 ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -83,6 +89,18 @@ $subPage = isset($_GET['sub_page']) ? $_GET['sub_page'] : '';
           <a <?php echo ($page === 'contact') ? 'class="nav-link active"' : 'class="nav-link"'; ?>
             href="index.php?page=contact">კონტაქტი</a>
         </li>
+        <?php
+        if (isset($_SESSION["user"])) {
+          if ($_SESSION["user_type"] === 'admin') {
+            echo '<li class="nav-item"> <a href="index.php?page=admin" class="nav-link' . ($page === "admin" ? ' active' : '') . '">ადმინ პანელი</a>';
+          }
+          echo "
+              <li class='nav-item'>
+                <a href='?logout' class='nav-link'>გამოსვლა</a>
+              </li>
+            ";
+        }
+        ?>
       </ul>
     </div>
   </div>

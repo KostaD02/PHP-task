@@ -175,6 +175,10 @@ main section.blogs div.post img {
   border-radius: 8px;
 }
 
+main section.wrapper-auth {
+  height: calc(100vh - 136px);
+}
+
 @media screen and (max-width: 780px) {
   main section.blogs div.post {
     grid-template-columns: 1fr;

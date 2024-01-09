@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php
   $page = isset($_GET['page']) ? $_GET['page'] : 'main';
-  $allowedPages = ['main', 'about', 'blog', 'contact', 'gallery'];
+  $allowedPages = ['main', 'about', 'blog', 'contact', 'gallery', 'admin', 'admin_login'];
   if (!in_array($page, $allowedPages)) {
     $page = 'main';
   }
@@ -41,6 +41,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <?php
+  $allowedPagesRedirectForAdmin = ['main', 'about', 'blog', 'gallery'];
+  if (in_array($page, $allowedPagesRedirectForAdmin)) {
+    echo "
+      <script>
+      let pressedText = '';
+      document.body.addEventListener('keyup', (event) => {
+        pressedText += event.key;
+        if (pressedText.length >= 5) {
+          if (pressedText === 'admin') {
+            location.href = 'index.php?page=admin';
+          } else {
+            pressedText = '';
+          }
+        }
+      });
+    </script>
+      ";
+  }
+  ?>
 </body>
 
 </html>

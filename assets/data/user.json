@@ -1,18 +1,12 @@
-{
-  "uesrs": [
-    {
-      "name": "konstantine",
-      "lastName": "datunishvili",
-      "email": "kdautinishvili@gmail.com",
-      "password": "testdev22K",
-      "userType": "admin"
-    },
-    {
-      "name": "konstantine",
-      "lastName": "datunishvili",
-      "email": "kdatunishvili@gmail.com",
-      "password": "testdev23K",
-      "user": "standard"
-    }
-  ]
-}
+[
+  {
+    "email": "kdautinishvili@gmail.com",
+    "password": "testdev22K",
+    "userType": "admin"
+  },
+  {
+    "email": "kdatunishvili@gmail.com",
+    "password": "testdev23K",
+    "userType": "standard"
+  }
+]
