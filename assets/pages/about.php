@@ -59,7 +59,7 @@ if ($sub_page === 'history' || $sub_page === 'about_company') {
     <a class="btn btn-primary" href="index.php?page=about&sub_page=about_company">კომპანიის შესახებ</a>
     <a class="btn btn-primary" href="index.php?page=about&sub_page=our_team">ჩვენი გუნდი</a>
   </section>
-  <article style="width: 100%" class="ql-snow">
+  <article style="width: 100%" class="ql-snow ql-editor">
     <?php
     switch ($sub_page) {
       case "history":
