@@ -12,8 +12,20 @@ if ($jsonData === null) {
   die('Error');
 }
 
-$data = $jsonData[$sub_page];
+$data;
 
+if ($sub_page === 'history' || $sub_page === 'about_company') {
+  $data = $jsonData[$sub_page];
+} else {
+  $jsonStringTeam = file_get_contents('./assets/data/team.json');
+  $jsonDataTeam = json_decode($jsonStringTeam, true);
+
+  if ($jsonData === null) {
+    die('Error');
+  }
+
+  $data = $jsonDataTeam[$sub_page];
+}
 ?>
 <section class="wrapper">
   <article class="text-center">
@@ -47,13 +59,10 @@ $data = $jsonData[$sub_page];
     <a class="btn btn-primary" href="index.php?page=about&sub_page=about_company">კომპანიის შესახებ</a>
     <a class="btn btn-primary" href="index.php?page=about&sub_page=our_team">ჩვენი გუნდი</a>
   </section>
-  <article>
+  <article style="width: 100%" class="ql-snow">
     <?php
     switch ($sub_page) {
-      case "history": {
-          echo $data;
-          break;
-        }
+      case "history":
       case "about_company": {
           echo $data;
           break;

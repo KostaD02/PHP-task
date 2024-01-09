@@ -16,9 +16,11 @@
     ?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
   <link rel="stylesheet" href="./assets/styles/style.css">
   <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/68782786?v=4" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
 </head>
 
 <body>

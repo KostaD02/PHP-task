@@ -26,8 +26,12 @@ class LoginUser
         if ($user['password'] === $this->password) {
           $_SESSION['user'] = $this->email;
           $_SESSION['user_type'] = $user['userType'];
-          header("Location: index.php");
-          exit();
+          echo "
+            <script>
+              location.href = 'index.php';
+            </script>
+          ";
+          return true;
         }
       }
     }

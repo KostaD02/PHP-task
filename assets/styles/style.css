@@ -179,6 +179,18 @@ main section.wrapper-auth {
   height: calc(100vh - 136px);
 }
 
+main .editor-container {
+  min-height: 375px;
+}
+
+main .edit_about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
 @media screen and (max-width: 780px) {
   main section.blogs div.post {
     grid-template-columns: 1fr;
